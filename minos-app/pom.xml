@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.minos</groupId>
+		<artifactId>minos-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>minos-app</artifactId>
+	<name>minos-app</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!--shrio版本-->
+		<shrio.version>1.2.2</shrio.version>
+	</properties>
+
+	<!-- 覆盖central的设置，允许下载snapshot的构件 <repositories> <repository> <id>central</id> 
+		<name>Maven Central Repository</name> <url>http://192.168.1.242:8081/nexus/content/groups/public/</url> 
+		<snapshots> <enabled>true</enabled> </snapshots> </repository> </repositories> -->
+
+	<dependencies>
+		<!-- 测试 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+            <scope>test</scope>
+		</dependency>
+		
+		<!-- Common包 -->
+		<dependency>
+			<groupId>com.minos</groupId>
+			<artifactId>minos-common</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- Core包 
+		<dependency>
+			<groupId>com.minos</groupId>
+			<artifactId>minos-core</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+		</dependency>
+		-->
+		
+		<!-- spring test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
+		<!--Begin shrio-->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${shrio.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>${shrio.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${shrio.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>${shrio.version}</version>
+		</dependency>
+		<!--End shrio-->
+
+	</dependencies>
+
+
+</project>

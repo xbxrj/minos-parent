@@ -1,2 +1,2 @@
-# minos-parent
-SSM项目业务
+# minos
+SSI搭框架
